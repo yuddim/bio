@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dmitry Yudin | Academic Profile</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    color: #222;
+    background: #fff;
+}
+
+.layout {
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.sidebar {
+    width: 220px;
+    padding: 30px 20px;
+    border-right: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: #fafafa;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #003366;
+    font-size: 15px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    width: 200px;
+    border-radius: 6px;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.publication {
+    margin-bottom: 18px;
+}
+
+.pub-links a {
+    font-size: 14px;
+    margin-right: 12px;
+    color: #003366;
+}
+
+.language-switch {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #eee;
+}
+
+.footer {
+    margin-top: 60px;
+    font-size: 14px;
+    color: #777;
+}
+</style>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = (el.dataset.lang === lang) ? 'block' : 'none';
+    });
+}
+window.onload = () => switchLang('en');
+</script>
+
+</head>
+<body>
+
+<div class="layout">
+
+<div class="sidebar">
+<h3>Dmitry Yudin</h3>
+<a href="#bio">Biography</a>
+<a href="#research">Research</a>
+<a href="#positions">Positions</a>
+<a href="#publications">Publications</a>
+<a href="#projects">Grants</a>
+<a href="#awards">Awards</a>
+<a href="#service">Service</a>
+</div>
+
+<div class="content">
+
+<div class="language-switch">
+<button onclick="switchLang('en')">English</button>
+<button onclick="switchLang('ru')">Русский</button>
+</div>
+
+<div class="header">
+<div>
+<h1>Dmitry Yudin</h1>
+<p data-lang="en">
+PhD (Candidate of Technical Sciences)<br>
+Head of Intelligent Transport Lab, MIPT<br>
+Leading Researcher, AIRI
+</p>
+<p data-lang="ru">
+Кандидат технических наук<br>
+Заведующий лабораторией интеллектуального транспорта МФТИ<br>
+Ведущий научный сотрудник AIRI
+</p>
+
+<p>
+Email: yudin.da@mipt.ru<br>
+GitHub: <a href="https://github.com/yuddim">github.com/yuddim</a><br>
+ORCID: <a href="https://orcid.org/0000-0002-1407-2633">0000-0002-1407-2633</a><br>
+Google Scholar: <a href="https://scholar.google.com/citations?hl=ru&user=UNdEBMkAAAAJ">Profile</a>
+</p>
+</div>
+
+<div>
+<img src="photo.png" alt="Dmitry Yudin" class="profile-photo">
+</div>
+</div>
+
+<section id="bio">
+<h2>Biography</h2>
+
+<p data-lang="en">
+Researcher in multimodal 3D mapping, SLAM, embodied AI and intelligent transport systems.
+Author of 100+ publications, PI of national and industrial AI projects.
+</p>
+
+<p data-lang="ru">
+Специалист в области мультимодального 3D-картирования, SLAM, embodied AI и интеллектуального транспорта.
+Автор более 100 научных публикаций, руководитель национальных и индустриальных проектов по ИИ.
+</p>
+</section>
+
+<section id="publications">
+<h2>Selected Publications (2024–2025)</h2>
+
+<div class="publication">
+<strong>M3DMap: Object-Aware Multimodal 3D Mapping for Dynamic Environments</strong><br>
+Optical Memory and Neural Networks, 2025
+<div class="pub-links">
+<a href="#">Article</a>
+<a href="#">Project</a>
+<a href="#">Code</a>
+</div>
+</div>
+
+<div class="publication">
+<strong>3DGraphLLM: Combining Semantic Graphs and Large Language Models for 3D Scene Understanding</strong><br>
+ICCV 2025
+<div class="pub-links">
+<a href="#">Article</a>
+<a href="#">Code</a>
+</div>
+</div>
+
+<div class="publication">
+<strong>PRISM-TopoMap: Online Topological Mapping</strong><br>
+IEEE RA-L, 2025
+<div class="pub-links">
+<a href="#">Article</a>
+<a href="#">Code</a>
+</div>
+</div>
+
+<div class="publication">
+<strong>SegmATRon: Embodied Adaptive Semantic Segmentation</strong><br>
+Neurocomputing, 2025
+<div class="pub-links">
+<a href="#">Article</a>
+<a href="#">Code</a>
+</div>
+</div>
+
+<p>Full publication list: 
+<a href="https://scholar.google.com/citations?hl=ru&user=UNdEBMkAAAAJ">Google Scholar</a>
+</p>
+
+</section>
+
+<section id="projects">
+<h2>Grants & Projects</h2>
+
+<ul data-lang="en">
+<li>2025 – AI Research Center Grant (HD multimodal mapping)</li>
+<li>2021–2023 – Russian Science Foundation Grant</li>
+<li>2022–2025 – Open multimodal neural localization library (CodeAI)</li>
+<li>Industrial SLAM & Robotics projects</li>
+</ul>
+
+<ul data-lang="ru">
+<li>2025 – Грант центра ИИ (HD-картирование)</li>
+<li>2021–2023 – Грант РНФ</li>
+<li>2022–2025 – Открытая библиотека нейросетевой локализации</li>
+<li>Индустриальные проекты по SLAM и робототехнике</li>
+</ul>
+
+</section>
+
+<section id="awards">
+<h2>Awards</h2>
+<ul>
+<li>2024 – UpGreat Level 5 Autonomous Truck Winner</li>
+<li>2023 – Governor’s Award (Moscow Region)</li>
+<li>2017 – IEEE Young Scientist Paper Award</li>
+</ul>
+</section>
+
+<section id="service">
+<h2>Academic Service</h2>
+<ul>
+<li>Vice-President, Russian Neural Network Society</li>
+<li>Editor, Optical Memory and Neural Networks Journal</li>
+<li>Deputy Chair, Neuroinformatics Conference</li>
+</ul>
+</section>
+
+<div class="footer">
+© 2026 Dmitry Yudin
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
