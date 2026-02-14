@@ -3,26 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dmitry Yudin | Academic Profile</title>
+<title>Dmitry Yudin | Academic Homepage</title>
 
 <style>
 body {
     margin: 0;
-    font-family: "Georgia", serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
-    background: #fff;
+    background: #ffffff;
+    line-height: 1.6;
 }
 
 .layout {
     display: flex;
-    max-width: 1300px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .sidebar {
     width: 220px;
-    padding: 30px 20px;
-    border-right: 1px solid #ddd;
+    padding: 40px 20px;
+    border-right: 1px solid #e5e5e5;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -30,16 +31,16 @@ body {
 }
 
 .sidebar h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .sidebar a {
     display: block;
     margin: 8px 0;
     text-decoration: none;
-    color: #003366;
-    font-size: 15px;
+    color: #8c1515;
+    font-size: 14px;
 }
 
 .sidebar a:hover {
@@ -48,42 +49,47 @@ body {
 
 .content {
     flex: 1;
-    padding: 40px;
+    padding: 50px 60px;
+    max-width: 800px;
 }
 
-.header {
+h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+}
+
+.profile {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.profile-photo {
-    width: 200px;
-    border-radius: 6px;
+.profile img {
+    width: 180px;
+    border-radius: 4px;
 }
 
-h1 {
-    margin-bottom: 5px;
-}
-
-h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    margin-top: 40px;
-}
-
-.section {
-    margin-top: 20px;
-}
-
-.publication {
-    margin-bottom: 18px;
+.pub {
+    margin-bottom: 15px;
 }
 
 .pub-links a {
-    font-size: 14px;
-    margin-right: 12px;
-    color: #003366;
+    font-size: 13px;
+    margin-right: 10px;
+    color: #8c1515;
+    text-decoration: none;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
 }
 
 .language-switch {
@@ -91,20 +97,25 @@ h2 {
 }
 
 button {
-    padding: 5px 10px;
-    margin-right: 5px;
+    padding: 4px 10px;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
 }
 
 button:hover {
     background: #eee;
 }
 
+ul {
+    padding-left: 20px;
+}
+
 .footer {
     margin-top: 60px;
-    font-size: 14px;
+    font-size: 13px;
     color: #777;
 }
 </style>
@@ -126,10 +137,11 @@ window.onload = () => switchLang('en');
 <div class="sidebar">
 <h3>Dmitry Yudin</h3>
 <a href="#bio">Biography</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
 <a href="#research">Research</a>
-<a href="#positions">Positions</a>
 <a href="#publications">Publications</a>
-<a href="#projects">Grants</a>
+<a href="#grants">Grants</a>
 <a href="#awards">Awards</a>
 <a href="#service">Service</a>
 </div>
@@ -141,18 +153,22 @@ window.onload = () => switchLang('en');
 <button onclick="switchLang('ru')">Русский</button>
 </div>
 
-<div class="header">
+<div class="profile">
 <div>
 <h1>Dmitry Yudin</h1>
+
 <p data-lang="en">
-PhD (Candidate of Technical Sciences)<br>
+PhD in Automation and Control of Technological Processes and Production<br>
 Head of Intelligent Transport Lab, MIPT<br>
-Leading Researcher, AIRI
+Leading Researcher, AIRI<br>
+Associate Professor, MIPT
 </p>
+
 <p data-lang="ru">
 Кандидат технических наук<br>
 Заведующий лабораторией интеллектуального транспорта МФТИ<br>
-Ведущий научный сотрудник AIRI
+Ведущий научный сотрудник AIRI<br>
+Доцент МФТИ
 </p>
 
 <p>
@@ -164,7 +180,7 @@ Google Scholar: <a href="https://scholar.google.com/citations?hl=ru&user=UNdEBMk
 </div>
 
 <div>
-<img src="photo.png" alt="Dmitry Yudin" class="profile-photo">
+<img src="photo.png" alt="Dmitry Yudin">
 </div>
 </div>
 
@@ -172,22 +188,79 @@ Google Scholar: <a href="https://scholar.google.com/citations?hl=ru&user=UNdEBMk
 <h2>Biography</h2>
 
 <p data-lang="en">
-Researcher in multimodal 3D mapping, SLAM, embodied AI and intelligent transport systems.
-Author of 100+ publications, PI of national and industrial AI projects.
+Researcher in multimodal 3D mapping, semantic scene understanding, SLAM, embodied AI and intelligent transport systems.
+Author of 100+ scientific publications, 3 monographs, 6 textbooks, and 10+ registered software products.
+H-index: 20 (Google Scholar), 9 (Scopus), 8 (WoS), 12 (RISC).
 </p>
 
 <p data-lang="ru">
 Специалист в области мультимодального 3D-картирования, SLAM, embodied AI и интеллектуального транспорта.
-Автор более 100 научных публикаций, руководитель национальных и индустриальных проектов по ИИ.
+Автор более 100 научных публикаций, 3 монографий, 6 учебных пособий и 10+ свидетельств о регистрации ПО.
+Индекс Хирша: 20 (Google Scholar), 9 (Scopus), 8 (WoS), 12 (РИНЦ).
 </p>
+</section>
+
+<section id="experience">
+<h2>Professional Experience</h2>
+
+<ul data-lang="en">
+<li>Since 2021 – Senior & Leading Researcher, AIRI</li>
+<li>Since 2019 – Head of Intelligent Transport Lab, MIPT</li>
+<li>Since 2019 – Associate Professor, MIPT</li>
+<li>2019–2020 – Senior Researcher, Cognitive Dynamic Systems Lab, MIPT</li>
+<li>2014–2025 – Co-founder & CEO, Recognition Systems LLC</li>
+<li>2011–2022 – Director, Industrial Intelligence LLC</li>
+<li>2009–2019 – Researcher & Associate Professor, BSTU n.a. V.G. Shukhov</li>
+</ul>
+
+<ul data-lang="ru">
+<li>С 2021 – Старший и ведущий научный сотрудник AIRI</li>
+<li>С 2019 – Заведующий лабораторией интеллектуального транспорта МФТИ</li>
+<li>С 2019 – Доцент МФТИ</li>
+<li>2019 – Старший научный сотрудник лаборатории когнитивных динамических систем МФТИ</li>
+<li>2014–2025 – Сооснователь и директор ООО «Распознающие системы»</li>
+<li>2011–2022 – Руководитель ООО «Промышленный интеллект»</li>
+<li>2009–2019 – Инженер, преподаватель, доцент БГТУ им. Шухова</li>
+</ul>
+
+</section>
+
+<section id="education">
+<h2>Education</h2>
+
+<ul data-lang="en">
+<li>2017 – MSc with honors in Mechatronics and Robotics</li>
+<li>2014 – PhD in Automation and Control</li>
+<li>2010 – Engineer diploma with honors</li>
+<li>2010 – Translator in Professional Communication (English)</li>
+<li>2009 – Bachelor with honors</li>
+</ul>
+
+<ul data-lang="ru">
+<li>2017 – Магистр с отличием, Мехатроника и робототехника</li>
+<li>2014 – Кандидат технических наук</li>
+<li>2010 – Инженер с отличием</li>
+<li>2010 – Переводчик в сфере проф. коммуникации</li>
+<li>2009 – Бакалавр с отличием</li>
+</ul>
+</section>
+
+<section id="research">
+<h2>Research Interests</h2>
+<ul>
+<li>Multimodal 3D Mapping</li>
+<li>Semantic SLAM</li>
+<li>Embodied AI</li>
+<li>Intelligent Transport Systems</li>
+<li>Large Language Models for Robotics</li>
+</ul>
 </section>
 
 <section id="publications">
 <h2>Selected Publications (2024–2025)</h2>
 
-<div class="publication">
-<strong>M3DMap: Object-Aware Multimodal 3D Mapping for Dynamic Environments</strong><br>
-Optical Memory and Neural Networks, 2025
+<div class="pub">
+<strong>M3DMap: Object-Aware Multimodal 3D Mapping for Dynamic Environments</strong>, 2025
 <div class="pub-links">
 <a href="#">Article</a>
 <a href="#">Project</a>
@@ -195,64 +268,53 @@ Optical Memory and Neural Networks, 2025
 </div>
 </div>
 
-<div class="publication">
-<strong>3DGraphLLM: Combining Semantic Graphs and Large Language Models for 3D Scene Understanding</strong><br>
-ICCV 2025
+<div class="pub">
+<strong>3DGraphLLM: Semantic Graphs and LLMs for 3D Scene Understanding</strong>, ICCV 2025
 <div class="pub-links">
 <a href="#">Article</a>
 <a href="#">Code</a>
 </div>
 </div>
 
-<div class="publication">
-<strong>PRISM-TopoMap: Online Topological Mapping</strong><br>
-IEEE RA-L, 2025
+<div class="pub">
+<strong>PRISM-TopoMap</strong>, IEEE RA-L 2025
 <div class="pub-links">
 <a href="#">Article</a>
 <a href="#">Code</a>
 </div>
 </div>
 
-<div class="publication">
-<strong>SegmATRon: Embodied Adaptive Semantic Segmentation</strong><br>
-Neurocomputing, 2025
+<div class="pub">
+<strong>SegmATRon</strong>, Neurocomputing 2025
 <div class="pub-links">
 <a href="#">Article</a>
 <a href="#">Code</a>
 </div>
 </div>
 
-<p>Full publication list: 
-<a href="https://scholar.google.com/citations?hl=ru&user=UNdEBMkAAAAJ">Google Scholar</a>
-</p>
+<p>Full publication list available on Google Scholar.</p>
 
 </section>
 
-<section id="projects">
+<section id="grants">
 <h2>Grants & Projects</h2>
-
-<ul data-lang="en">
-<li>2025 – AI Research Center Grant (HD multimodal mapping)</li>
-<li>2021–2023 – Russian Science Foundation Grant</li>
-<li>2022–2025 – Open multimodal neural localization library (CodeAI)</li>
-<li>Industrial SLAM & Robotics projects</li>
+<ul>
+<li>2025 – AI Research Center Grant (HD multimodal maps)</li>
+<li>2024 – Industrial road condition assessment project</li>
+<li>2023 – Multimodal robotics project with Sber Robotics</li>
+<li>2022–2025 – CodeAI multimodal localization library</li>
+<li>2021–2023 – Russian Science Foundation grant</li>
+<li>2017–2019 – Presidential grant for young scientists</li>
 </ul>
-
-<ul data-lang="ru">
-<li>2025 – Грант центра ИИ (HD-картирование)</li>
-<li>2021–2023 – Грант РНФ</li>
-<li>2022–2025 – Открытая библиотека нейросетевой локализации</li>
-<li>Индустриальные проекты по SLAM и робототехнике</li>
-</ul>
-
 </section>
 
 <section id="awards">
 <h2>Awards</h2>
 <ul>
 <li>2024 – UpGreat Level 5 Autonomous Truck Winner</li>
-<li>2023 – Governor’s Award (Moscow Region)</li>
+<li>2023 – Moscow Region Governor’s Award</li>
 <li>2017 – IEEE Young Scientist Paper Award</li>
+<li>Multiple Presidential Scholarships and Innovation Grants</li>
 </ul>
 </section>
 
@@ -262,6 +324,8 @@ Neurocomputing, 2025
 <li>Vice-President, Russian Neural Network Society</li>
 <li>Editor, Optical Memory and Neural Networks Journal</li>
 <li>Deputy Chair, Neuroinformatics Conference</li>
+<li>Organizer of AI Hackathons (MIPT)</li>
+<li>Deputy Chair of Jury, “I am a Professional” Olympiad</li>
 </ul>
 </section>
 
